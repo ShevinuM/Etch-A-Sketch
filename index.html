@@ -9,25 +9,40 @@
 			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 			crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
-        <script src="script.js" defer></script>
-        <link rel="stylesheet" href="styles.css">
+		<script src="script.js" defer></script>
+		<link rel="stylesheet" href="styles.css" />
 		<title>Document</title>
 	</head>
 	<body>
 		<div class="container window">
-            <div class="row title-bar">
-                    <h1 class="title">Etch-A-Sketch</h1>
-            </div>
-			
+			<div class="row title-bar">
+				<h1 class="title">Etch-A-Sketch</h1>
+			</div>
+
 			<div class="row separator"></div>
-            <div class="row">
-                <div class="col-lg-5">
-                    
-                </div>
-                <div class="col-lg-7">
-                    <div id="grid-container"></div>
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-5 options">
+					<span>
+						<input
+							type="color"
+							class="colour-picker"
+							id="pen-color"
+							value="#000000" />
+						<label for="pen-color">Pen Colour</label>
+					</span>
+					<span>
+						<input
+							type="color"
+							class="colour-picker"
+							id="background-color"
+							value="#ffff00" />
+						<label for="pen-color">Background Colour</label>
+					</span>
+				</div>
+				<div class="col-lg-7">
+					<div id="grid-container"></div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

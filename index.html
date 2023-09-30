@@ -22,22 +22,53 @@
 			<div class="row separator"></div>
 			<div class="row">
 				<div class="col-lg-5 options">
-					<span>
-						<input
-							type="color"
-							class="colour-picker"
-							id="pen-color"
-							value="#000000" />
-						<label for="pen-color">Pen Colour</label>
-					</span>
-					<span>
-						<input
-							type="color"
-							class="colour-picker"
-							id="background-color"
-							value="#ffff00" />
-						<label for="pen-color">Background Colour</label>
-					</span>
+					<div class="row">
+						<span>
+							<input
+								type="color"
+								class="colour-picker"
+								id="pen-color"
+								value="#000000" />
+							<label for="pen-color">Pen Colour</label>
+						</span>
+						<span>
+							<input
+								type="color"
+								class="colour-picker"
+								id="background-color"
+								value="#ffffff" />
+							<label for="pen-color">Background Colour</label>
+						</span>
+					</div>
+					<div class="row">
+						<span>
+							<input
+								type="color"
+								class="colour-picker"
+								id="grid-color"
+								value="#000000" />
+							<label for="grid-color">Grid Colour</label>
+						</span>
+					</div>
+					<div class="row">
+						<span>
+							<input
+								id="showGridLines"
+								type="checkbox" 
+								checked/>
+							<label for="showGridLines">Show Grid Lines</label>
+						</span>
+					</div>
+					<div class="row">
+						<span>
+							<label for="input-type">Input Type</label>
+							<select id="input-type">
+								<option>pen</option>
+								<option>eraser</option>
+								<option>shading pen</option>
+							  </select>
+						</span>
+					</div>
 				</div>
 				<div class="col-lg-7">
 					<div id="grid-container"></div>

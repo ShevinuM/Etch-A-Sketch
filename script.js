@@ -105,8 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else if (selectedInputType == "eraser") {
 			eraserMode = true;
 		} else if (selectedInputType == "rainbow") {
+			eraserMode = false;
 			rainbowMode = true;
 		} else {
+			eraserMode = false;
 		}
 	}
 

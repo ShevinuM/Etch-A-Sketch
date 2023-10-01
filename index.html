@@ -52,10 +52,7 @@
 					</div>
 					<div class="row">
 						<span>
-							<input
-								id="showGridLines"
-								type="checkbox" 
-								checked/>
+							<input id="showGridLines" type="checkbox" checked />
 							<label for="showGridLines">Show Grid Lines</label>
 						</span>
 					</div>
@@ -63,10 +60,23 @@
 						<span>
 							<label for="input-type">Input Type</label>
 							<select id="input-type">
-								<option>pen</option>
-								<option>eraser</option>
-								<option>shading pen</option>
-							  </select>
+								<option value="pen">pen</option>
+								<option value="eraser">eraser</option>
+								<option value="shading_pen">shading pen</option>
+								<option value="rainbow">rainbow pen</option>
+							</select>
+						</span>
+					</div>
+					<div class="row">
+						<span>
+							<label for="grid-size-slider">Grid Size</label>
+							<input
+								type="range"
+								min="5"
+								max="100"
+								value="32"
+								id="grid-size-slider" 
+								class = "slider"/>
 						</span>
 					</div>
 				</div>

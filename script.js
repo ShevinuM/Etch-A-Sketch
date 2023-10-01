@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	let isMouseDown = false;
 	let penColor = "black"
 	let backgroundColor = "white";
+	let eraserMode = false;
+	let rainbowMode = false;
+	const rainbowColors = ["#FF0000", "#FF7F00", "#FFFF00", "#00FF00", "#0000FF", "#4B0082", "#9400D3"];
 
 	// Event to set the flag true when mouse is down
 	container.addEventListener("mousedown", function () {
@@ -14,15 +17,25 @@ document.addEventListener("DOMContentLoaded", function () {
 	container.addEventListener("mouseup", function () {
 		isMouseDown = false;
 	});
+	
 
-	for (let i = 0; i < 32 * 32; i++) {
+	for (let i = 0; i < 100 * 100; i++) {
 		const cell = document.createElement("div");
 		cell.classList.add("cell");
 		// Add more properties or event listeners to each cell if needed.
 		container.appendChild(cell);
 
 		cell.addEventListener("mouseover", function () {
-			if (isMouseDown) this.style.backgroundColor = penColor;
+			if (isMouseDown) {
+				if (eraserMode) {
+					this.style.backgroundColor = null;
+				} else if (rainbowMode) {
+					const randomIndex = Math.floor(Math.random() * rainbowColors.length);
+  					this.style.backgroundColor = rainbowColors[randomIndex];
+				} else {
+					this.style.backgroundColor = penColor;
+				}
+			}
 		});
 	}
 
@@ -61,4 +74,24 @@ document.addEventListener("DOMContentLoaded", function () {
 			  });
 		}
 	  });
+	
+	const inputTypeSelector = document.querySelector('#input-type');
+	inputTypeSelector.addEventListener("change", watchInputTypeSelector);
+
+	function watchInputTypeSelector(event) {
+		const selectedInputType = inputTypeSelector.value;
+		console.log(selectedInputType);
+		if (selectedInputType == "pen") {
+			eraserMode = false;
+			rainbowMode = false;
+		} else if (selectedInputType == "eraser") {
+			eraserMode = true;
+		} else if (selectedInputType == "rainbow") {
+			rainbowMode = true;
+		} else {
+
+		}
+
+		}
+	
 });

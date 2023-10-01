@@ -13,8 +13,8 @@ body {
 
 #grid-container {
 	display: grid;
-	grid-template-columns: repeat(100, 1fr);
-	grid-template-rows: repeat(100, 1fr);
+	grid-template-columns: repeat(32, 1fr);
+	grid-template-rows: repeat(32, 1fr);
 	grid-gap: 0px;
 	width: 600px;
 	height: 600px;

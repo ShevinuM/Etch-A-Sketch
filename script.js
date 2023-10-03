@@ -113,10 +113,12 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	const gridSizeSelector = document.querySelector("#grid-size-slider");
+	const gridSizeDisplay = document.querySelector("#grid-size-display");
 	gridSizeSelector.addEventListener("change", watchGridSizeSelector);
 
 	function watchGridSizeSelector(event) {
 		const selectedGridSize = gridSizeSelector.value;
+		gridSizeDisplay.textContent = `${selectedGridSize} × ${selectedGridSize}`;
 		container.style[
 			"grid-template-columns"
 		] = `repeat(${selectedGridSize}, 1fr)`;
@@ -125,4 +127,5 @@ document.addEventListener("DOMContentLoaded", function () {
 		] = `repeat(${selectedGridSize}, 1fr)`;
 		createGrid(selectedGridSize);
 	}
+
 });
